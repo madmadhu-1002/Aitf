@@ -48,32 +48,33 @@ const AboutUs = () => {
         </div>
         <div className="d-flex justify-content-center">
           <div className={`${styles.aboutButton} text-white text-center`}>
-            <Button>Get In Touch</Button>
+            <Button className={`${styles.btn}`}>Get In Touch</Button>
           </div>
         </div>
 
       </div>
       {/* about */}
       <Container fluid className={styles.ambulance}>
-        <Row>
+        <Row className='mt-5'>
 
           <Col sm={6} className="d-flex flex-column justify-content-end">
-            <div>
-              <Image
+            <div >
+              <Image style={{ position: 'relative', bottom:"45px" }}
                 src="/assets/miltary1.png"
-                width={1920}
-                height={860}
+                width={610}
+                height={376}
                 alt="ambulance"
-                layout="responsive"
-
               />
             </div>
           </Col>
           <Col sm={6}>
             <div className={`${styles.carouselDiv} ms-2 text-dark`} >
-              <h2 className="fw-bold display-6 display-md-5 display-lg-4">About AITF</h2>
+              <h2 style={{ fontWeight: 700, fontSize: '48px' }} className="fw-bold display-6 display-md-5 display-lg-4">
+                About <span style={{ color: '#0071FF' }}>AITF</span>
+              </h2>
               <p className="fs-6 fs-md-5 fs-lg-4">Al Ihassan Trading FZCO. (AITF) is a one stop solution for all your automotive needs. We offer an exclusive tailored made solution to match our customer’s requirement. Equipped with vast experience and professional expertise, our sales and service staff are ready to tailor-make solutions that meet individual requirement and undertake any Automobile related projects.</p>
-              <Button variant="dark">Contact Us</Button>
+              <p  className="fs-6 fs-md-5 fs-lg-4">We meticulously design our extensive range of products and services to enhance your vehicle's performance and potential, efficiently addressing all aftermarket needs.</p>
+              <Button  className={`${styles.btn1}`}>Contact Us</Button>
             </div>
           </Col>
         </Row>
@@ -81,116 +82,113 @@ const AboutUs = () => {
       {/* history */}
       <Container fluid className={styles.ambulance}>
         <Row>
-
-
           <Col sm={6}>
             <div className={`${styles.carouselDiv} ms-2 text-dark`} >
-              <h2 className="fw-bold display-6 display-md-5 display-lg-4">History Of AITF</h2>
+              <h2 className="display-6 display-md-5 display-lg-4" style={{ fontSize:'48px', fontWeight:'700'}}>History Of AITF</h2>
               <p className="fs-6 fs-md-5 fs-lg-4">Al Ihassan Trading FZCO. (AITF) is a one stop solution for all your automotive needs. We offer an exclusive tailored made solution to match our customer’s requirement. Equipped with vast experience and professional expertise, our sales and service staff are ready to tailor-make solutions that meet individual requirement and undertake any Automobile related projects.</p>
+              <p className='fs-6 fs-md-5 fs-lg-4'>Our industry experience spans over 65 years. Our expansive footprint and robust network are our greatest strengths.</p>
+              <p className='fs-6 fs-md-5 fs-lg-4'>Guided by a corporate vision to be a globally recognized business group that creates lifelong customer relationships, Bahwan International Group boasts an impressive portfolio of brands, including Suzuki, Changan, Foton, BAIC, Iveco, CASE, Terex, Wacker Neuson, and Topcon, among many others.</p>
               <div className="d-flex flex-wrap gap-2 mt-3">
-                <Button variant="dark">Read More</Button>
-                <Button variant="primary">Contact Us</Button>
+                <Button className={`${styles.btn1}`}>Read More</Button>
+                <Button className={`${styles.btn2}`}>Contact Us</Button>
               </div>
             </div>
           </Col>
           <Col sm={6} className="d-flex flex-column justify-content-end">
             <div>
               <Image
-                src="/assets/miltary1.png"
-                width={1920}
-                height={860}
+                src="/assets/miltary2.png"
+                width={610}
+                height={376}
                 alt="ambulance"
-                layout="responsive"
-
               />
             </div>
           </Col>
         </Row>
       </Container>
       {/* case study */}
-      <Container fluid className={`bg-black text-white ${styles.ambulance}`}>
-        <Row>
-          <Col sm={6} className="d-flex flex-column justify-content-end">
+      <h2 className=" display-6 display-md-5 display-lg-4 mt-5" style={{marginLeft:'20px', fontSize:'48px', fontWeight:'600'}}>Case Study</h2>
+      <Container fluid className={`bg-black text-white  ${styles.ambulance}`}>
+        <Row >
+          <Col sm={5} className="d-flex flex-column justify-content-end">
             <div>
-              <Image
-                src="/assets/miltary1.png"
-                width={1920}
-                height={860}
+              <Image 
+                src="/assets/miltary3.png"
+                width={510}
+                height={376}
                 alt="ambulance"
-                layout="responsive"
-
+                layout='responsive'
               />
             </div>
           </Col>
-          <Col sm={6}>
+          <Col sm={7}>
             <div className={`${styles.carouselDiv} ms-2 mt-3`} >
               <h2 className="fw-bold display-6 display-md-5 display-lg-4">Nissan Y62</h2>
-              <p className="fs-6 fs-md-5 fs-lg-4">Al Ihassan Trading FZCO. (AITF) is a one stop solution for all your automotive needs. We offer an exclusive tailored made solution to match our customer’s requirement. Equipped with vast experience and professional expertise, our sales and service staff are ready to tailor-make solutions that meet individual requirement and undertake any Automobile related projects.</p>
+              <p className="fs-6 fs-md-5 fs-lg-4">"I chose AWeber because I simply could not find any other provider that offered all the tools I needed under one platform, such autoresponders, self-hosted sign up forms, and integration with third-party apps. I also love AWeber's pay-as-you-grow billing scale, which enables companies with smaller mailing lists to have full access to all the robust features AWeber offers without being up-charged."</p>
               <div className="d-flex flex-wrap gap-2 mt-3">
-                <Button variant="dark">Read More</Button>
-                <Button variant="primary">Know More</Button>
+                <Button className={`${styles.btn2}`}>Read More</Button>
+                <Button className={`${styles.btn3}`}>Know More</Button>
               </div>
             </div>
           </Col>
-
         </Row>
       </Container>
       {/* philosophy */}
       <section className="bg-white">
-      <Container className="py-5 text-center">
-        <h2 className="fw-semibold mb-4">Our Philosophy</h2>
-        <Row className="g-4">
-          {philosophyPoints.map((point, index) => (
-            <Col md={4} key={index}>
-              <Card className="border-0 h-100">
-                <Card.Body className="p-4 bg-light rounded shadow-sm">
-                  <div className="mb-3 d-flex justify-content-center">
-                    {point.icon}
-                  </div>
-                  <h3 className="h5 mb-2">{point.title}</h3>
-                  <Card.Text className="text-muted mb-0">
-                    {point.description}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+        <Container className="py-5 text-center">
+          <h2 className="fw-semibold mb-4">Our Philosophy</h2>
+          <Row className="g-4">
+            {philosophyPoints.map((point, index) => (
+              <Col md={4} key={index}>
+                <Card className="border-0 h-100">
+                  <Card.Body className="p-4 bg-light rounded shadow-sm">
+                    <div className="mb-3 d-flex justify-content-center">
+                      {point.icon}
+                    </div>
+                    <h3 className="h5 mb-2">{point.title}</h3>
+                    <Card.Text className="text-muted mb-0">
+                      {point.description}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
       {/* our team */}
       <section className="py-5 bg-light">
-      <Container>
-        <h2 className="text-center h3 fw-semibold mb-4">Team of Experts</h2>
-        <Row className="g-4">
-          {teamMembers.map((member, idx) => (
-            <Col md={4} key={idx}>
-              <Card className="text-center h-100 border-0">
-                <div className="mx-auto mt-3" style={{ width: 120, height: 120 }}>
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={120}
-                    height={120}
-                    className="rounded-circle"
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title className="h6">{member.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">{member.title}</Card.Subtitle>
-                  <Card.Text className="text-muted" style={{ fontSize: '0.875rem' }}>
-                    {member.description}
-                  </Card.Text>
-                  <div className="d-flex justify-content-center gap-3 text-primary fs-5">
-                    {/* Icons could go here */}
+        <Container>
+          <h2 className="text-center h3 fw-semibold mb-4">Team of Experts</h2>
+          <Row className="g-4">
+            {teamMembers.map((member, idx) => (
+              <Col md={4} key={idx}>
+                <Card className="text-center h-100 border-0">
+                  <div className="mx-auto mt-3" style={{ width: 120, height: 120 }}>
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={120}
+                      height={120}
+                      className="rounded-circle"
+                    />
                   </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+                  <Card.Body>
+                    <Card.Title className="h6">{member.name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{member.title}</Card.Subtitle>
+                    <Card.Text className="text-muted" style={{ fontSize: '0.875rem' }}>
+                      {member.description}
+                    </Card.Text>
+                    <div className="d-flex justify-content-center gap-3 text-primary fs-5">
+                      {/* Icons could go here */}
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
     </>
   )
 }

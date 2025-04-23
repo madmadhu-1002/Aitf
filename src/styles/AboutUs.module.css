@@ -6,6 +6,51 @@
     z-index: 10;
   }
 
+  .btn {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none !important;
+    box-shadow: 0px 0px 8px 5px #8FD8FF;
+  }
+
+  .btn1 {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none !important;
+    border-radius: 0px ;
+  }
+
+  .btn2 {
+    background-color: #0071FF !important;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none !important;
+    border-radius: 0px ;
+  }
+
+  .btn3 {
+    background-color: #FFF !important;
+    color: #585858 !important;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none !important;
+    border-radius: 0px ;
+  }
+
   .aboutDiv {
     position: absolute;
     top: 25%;

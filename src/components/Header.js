@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa'; 
+import styles from '@/styles/Header.module.css'
 
 const Header = () => (
   <Navbar expand="lg" bg="light" variant="light">
@@ -32,15 +34,18 @@ const Header = () => (
           <Nav.Link as={Link} href="/career">Career</Nav.Link>
         </Nav>
 
-        <Form className="d-flex">
+        <Form className={`d-flex ${styles['custom-search-bar']}`}>
           <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
+            type="text"
+            placeholder="Type here"
+            className={styles['search-input']}
             aria-label="Search"
           />
-          <Button variant="outline-success">Search</Button>
+          <Button className={styles['search-button']}>
+            <FaSearch className={styles['me-1']} /> Search
+          </Button>
         </Form>
+
       </Navbar.Collapse>
     </Container>
   </Navbar>

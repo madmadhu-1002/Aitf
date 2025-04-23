@@ -10,28 +10,28 @@ import { useState } from "react";
 
 const Footer = () => {
     const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+    const [message, setMessage] = useState("");
 
-  const handleSubscribe = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await fetch("https://admin.gulfgreatsands.com/api/saveTheSubscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+    const handleSubscribe = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await fetch("https://admin.gulfgreatsands.com/api/saveTheSubscribe", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email }),
+            });
 
-      const data = await res.json();
-      if (res.ok) {
-        setMessage("Subscribed successfully!");
-        setEmail("");
-      } else {
-        setMessage(data.message || "Subscription failed.");
-      }
-    } catch (error) {
-      setMessage("Something went wrong. Please try again.");
-    }
-  };
+            const data = await res.json();
+            if (res.ok) {
+                setMessage("Subscribed successfully!");
+                setEmail("");
+            } else {
+                setMessage(data.message || "Subscription failed.");
+            }
+        } catch (error) {
+            setMessage("Something went wrong. Please try again.");
+        }
+    };
     return (
         <>
             <Container fluid>
@@ -57,13 +57,13 @@ const Footer = () => {
                                     <Col md={4} sm={12}>
                                         <h3>Explore</h3>
                                         <nav className="nav flex-column">
-  <Link href="/"     className="nav-link px-0">Home</Link>
-  <Link href="/about"   className="nav-link px-0">About Us</Link>
-  <Link href="/services" className="nav-link px-0">Services</Link>
-  <Link href="/blog"     className="nav-link px-0">Blog and News</Link>
-  <Link href="/career"   className="nav-link px-0">Career</Link>
-  <Link href="/contact"  className="nav-link px-0">Contact Us</Link>
-</nav>
+                                            <Link href="/" className="nav-link px-0">Home</Link>
+                                            <Link href="/about" className="nav-link px-0">About Us</Link>
+                                            <Link href="/services" className="nav-link px-0">Services</Link>
+                                            <Link href="/blog" className="nav-link px-0">Blog and News</Link>
+                                            <Link href="/career" className="nav-link px-0">Career</Link>
+                                            <Link href="/contact" className="nav-link px-0">Contact Us</Link>
+                                        </nav>
 
                                     </Col>
 
@@ -80,8 +80,8 @@ const Footer = () => {
                                 className="me-2"
                                 aria-label="Subscribe"
                                 value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
                             />
                             <Button type="submit" variant="outline-success">Subscribe</Button>
                         </Form>
