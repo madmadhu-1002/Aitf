@@ -112,7 +112,7 @@ const AboutUs = () => {
         <Row >
           <Col sm={5} className="d-flex flex-column justify-content-end">
             <div>
-              <Image 
+              <Image className='pt-2'
                 src="/assets/miltary3.png"
                 width={510}
                 height={376}
@@ -124,7 +124,7 @@ const AboutUs = () => {
           <Col sm={7}>
             <div className={`${styles.carouselDiv} ms-2 mt-3`} >
               <h2 className="fw-bold display-6 display-md-5 display-lg-4">Nissan Y62</h2>
-              <p className="fs-6 fs-md-5 fs-lg-4">"I chose AWeber because I simply could not find any other provider that offered all the tools I needed under one platform, such autoresponders, self-hosted sign up forms, and integration with third-party apps. I also love AWeber's pay-as-you-grow billing scale, which enables companies with smaller mailing lists to have full access to all the robust features AWeber offers without being up-charged."</p>
+              <p className="fs-6 fs-md-5 fs-lg-4" style={{marginRight:'20px', fontSize:'24px !important', fontWeight:'400'}} >"I chose AWeber because I simply could not find any other provider that offered all the tools I needed under one platform, such autoresponders, self-hosted sign up forms, and integration with third-party apps. I also love AWeber's pay-as-you-grow billing scale, which enables companies with smaller mailing lists to have full access to all the robust features AWeber offers without being up-charged."</p>
               <div className="d-flex flex-wrap gap-2 mt-3">
                 <Button className={`${styles.btn2}`}>Read More</Button>
                 <Button className={`${styles.btn3}`}>Know More</Button>
@@ -136,7 +136,7 @@ const AboutUs = () => {
       {/* philosophy */}
       <section className="bg-white">
         <Container className="py-5 text-center">
-          <h2 className="fw-semibold mb-4">Our Philosophy</h2>
+          <h2 className="fw-semibold mb-4" style={{ fontSize:'40px', fontWeight:'600'}}>Our Philosophy</h2>
           <Row className="g-4">
             {philosophyPoints.map((point, index) => (
               <Col md={4} key={index}>
