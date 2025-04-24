@@ -17,17 +17,13 @@ const SupportProjects = () => {
         <div className="d-flex justify-content-center">
           <div className={`${styles.projectsDiv} text-white text-center`}>
             <h1 className="fw-bold display-6 display-md-5 display-lg-4">you can&#39;t literally &quot;find&quot; a best friend for your car</h1>
-
           </div>
         </div>
 
       </div>
       <Container fluid>
-        <h1 style={{ marginBottom: '0.3rem', fontSize: '36px', fontWeight: 700 }}>Projects</h1>
+        <h1 style={{ marginTop: '40px', fontSize: '36px', fontWeight: 700, marginLeft:'30px' }}>Projects</h1>
         <Row>
-          <Col sm={4}>
-            <Projects />
-          </Col>
           <Col sm={4}>
             <Projects />
           </Col>
@@ -39,7 +35,7 @@ const SupportProjects = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container style={{marginTop:'50px'}}>
         <Row>
           <Col>
             <h3>After Sales Support</h3>
@@ -57,7 +53,7 @@ const SupportProjects = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container style={{marginTop:'100px'}}>
         <Row>
           <Col>
             <Image
@@ -76,28 +72,30 @@ const SupportProjects = () => {
 
         </Row>
       </Container>
-      <Container className='bg-black text-white mt-3 mb-3'>
+      <div className='bg-black text-white' style={{marginBottom:'150px', marginTop:'100px'}}>
+        <Container>
         <Row>
           <Col className='pt-5'>
-            <h3>Training</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <h3 style={{fontSize:'36px', fontWeight:'600'}}>Training</h3>
+            <p style={{fontSize:'17px', fontWeight:'400'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             <div className="d-flex flex-wrap gap-2">
-              <Button variant="primary">Contact Us</Button>
-              <Button variant="light">Training</Button>
+              <Button className={`${styles.btn2}`}>Contact Us</Button>
+              <Button className={`${styles.btn3}`}>Training</Button>
             </div>
           </Col>
           <Col>
             <Image
               src="/assets/image 7.png"
               width={583}
-              height={469}
+              height={470}
               alt="a car"
               layout="responsive"
             />
           </Col>
         </Row>
 
-      </Container>
+        </Container>
+      </div>
       
 
     </>

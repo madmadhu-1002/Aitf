@@ -1,4 +1,4 @@
-.custom-search-bar {
+.customSearchBar {
     border: 1px solid #0071FF;
     border-radius: 50px;
     overflow: hidden;
@@ -6,7 +6,7 @@
     width: 200px;
   }
   
-  .search-input {
+  .searchInput {
     border: none !important;
     border-radius: 50px 0 0 50px;
     padding-left: 16px;
@@ -19,7 +19,7 @@
     font-weight: 500 !important;
   }
   
-  .search-button {
+  .searchButton {
     background-color: #0071ff;
     border: none;
     border-radius: 20px !important;
@@ -37,8 +37,5 @@
     font-weight: 500 !important;
   }
   
-  .search-button:hover {
-    background-color: #0071FF;
-  }
   
   

@@ -138,14 +138,14 @@ const AboutUs = () => {
       {/* philosophy */}
       <section className="bg-white">
         <Container className="py-5 text-center">
-          <h2 className="fw-semibold mb-4" style={{ fontSize: '40px', fontWeight: '600' }}>Our Philosophy</h2>
+          <h2 className="fw-semibold" style={{ fontSize: '40px', fontWeight: '600' }}>Our Philosophy</h2>
           <div className="min-h-screen bg-gray-50 p-4">
             <VisionMissionValues />
           </div>
         </Container>
       </section>
       {/* our team */}
-      <section className="py-5 bg-light">
+      <section className="bg-light" style={{marginBottom:'150px'}}>
         <Container>
           <h2 className="text-center h3 fw-semibold" style={{fontSize:'40px', fontWeight:'600'}}>Team of Experts</h2>
           <div className="max-w-7xl mx-auto px-4">

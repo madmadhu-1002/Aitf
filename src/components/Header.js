@@ -34,14 +34,14 @@ const Header = () => (
           <Nav.Link as={Link} href="/career">Career</Nav.Link>
         </Nav>
 
-        <Form className={`d-flex ${styles['custom-search-bar']}`}>
+        <Form className={`d-flex ${styles['customSearchBar']}`}>
           <Form.Control
             type="text"
             placeholder="Type here"
-            className={styles['search-input']}
+            className={styles['searchInput']}
             aria-label="Search"
           />
-          <Button className={styles['search-button']}>
+          <Button className={styles['searchButton']}>
             <FaSearch className={styles['me-1']} /> Search
           </Button>
         </Form>

@@ -9,7 +9,7 @@ const Projects = () => {
   const [hovered, setHovered] = useState(false);
   return (
     <>
-    <Container className="mt-5">
+    <Container>
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
