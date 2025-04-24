@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { FaRegLightbulb, FaHandsHelping, FaUsers, FaTwitter, FaLinkedin, FaFacebook, FaDribbble } from 'react-icons/fa';
 import styles from '@/styles/AboutUs.module.css'
 import { Button, Container, Row, Col, Card } from 'react-bootstrap';
+import VisionMissionValues from "@/components/VisionMissionValues";
+import ProfileCard from '@/components/ProfileCard';
 
 const philosophyPoints = [
   {
@@ -75,8 +77,6 @@ const AboutUs = () => {
               <p className="fs-6 fs-md-5 fs-lg-4">Al Ihassan Trading FZCO. (AITF) is a one stop solution for all your automotive needs. We offer an exclusive tailored made solution to match our customer’s requirement. Equipped with vast experience and professional expertise, our sales and service staff are ready to tailor-make solutions that meet individual requirement and undertake any Automobile related projects.</p>
               <p className="fs-6 fs-md-5 fs-lg-4">We meticulously design our extensive range of products and services to enhance your vehicle's performance and potential, efficiently addressing all aftermarket needs.</p>
               <Button className={`${styles.btn1}`}>Contact Us</Button>
-              <p className="fs-6 fs-md-5 fs-lg-4">We meticulously design our extensive range of products and services to enhance your vehicle&#39;s performance and potential, efficiently addressing all aftermarket needs.</p>
-              <Button variant="dark">Contact Us</Button>
             </div>
           </Col>
         </Row>
@@ -90,8 +90,6 @@ const AboutUs = () => {
               <p className="fs-6 fs-md-5 fs-lg-4">Al Ihassan Trading FZCO. (AITF) is a one stop solution for all your automotive needs. We offer an exclusive tailored made solution to match our customer’s requirement. Equipped with vast experience and professional expertise, our sales and service staff are ready to tailor-make solutions that meet individual requirement and undertake any Automobile related projects.</p>
               <p className='fs-6 fs-md-5 fs-lg-4'>Our industry experience spans over 65 years. Our expansive footprint and robust network are our greatest strengths.</p>
               <p className='fs-6 fs-md-5 fs-lg-4'>Guided by a corporate vision to be a globally recognized business group that creates lifelong customer relationships, Bahwan International Group boasts an impressive portfolio of brands, including Suzuki, Changan, Foton, BAIC, Iveco, CASE, Terex, Wacker Neuson, and Topcon, among many others.</p>
-              <p className="fs-6 fs-md-5 fs-lg-4">Our industry experience spans over 65 years. Our expansive footprint and robust network are our greatest strengths.</p>
-              <p className="fs-6 fs-md-5 fs-lg-4">Guided by a corporate vision to be a globally recognized business group that creates lifelong customer relationships, Bahwan International Group boasts an impressive portfolio of brands, including Suzuki, Changan, Foton, BAIC, Iveco, CASE, Terex, Wacker Neuson, and Topcon, among many others.</p>
               <div className="d-flex flex-wrap gap-2 mt-3">
                 <Button className={`${styles.btn1}`}>Read More</Button>
                 <Button className={`${styles.btn2}`}>Contact Us</Button>
@@ -129,7 +127,6 @@ const AboutUs = () => {
             <div className={`${styles.carouselDiv} ms-2 mt-3`} >
               <h2 className="fw-bold display-6 display-md-5 display-lg-4">Nissan Y62</h2>
               <p className="fs-6 fs-md-5 fs-lg-4" style={{ marginRight: '20px', fontSize: '24px !important', fontWeight: '400' }} >"I chose AWeber because I simply could not find any other provider that offered all the tools I needed under one platform, such autoresponders, self-hosted sign up forms, and integration with third-party apps. I also love AWeber's pay-as-you-grow billing scale, which enables companies with smaller mailing lists to have full access to all the robust features AWeber offers without being up-charged."</p>
-              <p className="fs-6 fs-md-5 fs-lg-4">&quot;I chose AWeber because I simply could not find any other provider that offered all the tools I needed under one platform, such as autoresponders, self-hosted sign up forms, and integration with third-party apps. I also love AWeber&#39;s pay-as-you-grow billing scale, which enables companies with smaller mailing lists to have full access to all the robust features AWeber offers without being up-charged.&quot;</p>
               <div className="d-flex flex-wrap gap-2 mt-3">
                 <Button className={`${styles.btn2}`}>Read More</Button>
                 <Button className={`${styles.btn3}`}>Know More</Button>
@@ -142,30 +139,21 @@ const AboutUs = () => {
       <section className="bg-white">
         <Container className="py-5 text-center">
           <h2 className="fw-semibold mb-4" style={{ fontSize: '40px', fontWeight: '600' }}>Our Philosophy</h2>
-          <Row className="g-4">
-            {philosophyPoints.map((point, index) => (
-              <Col md={4} key={index}>
-                <Card className="border-0 h-100">
-                  <Card.Body className="p-4 bg-light rounded shadow-sm">
-                    <div className="mb-3 d-flex justify-content-center">
-                      {point.icon}
-                    </div>
-                    <h3 className="h5 mb-2">{point.title}</h3>
-                    <Card.Text className="text-muted mb-0">
-                      {point.description}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
+          <div className="min-h-screen bg-gray-50 p-4">
+            <VisionMissionValues />
+          </div>
         </Container>
       </section>
       {/* our team */}
       <section className="py-5 bg-light">
         <Container>
-          <h2 className="text-center h3 fw-semibold mb-4">Team of Experts</h2>
-          <Row className="g-4">
+          <h2 className="text-center h3 fw-semibold" style={{fontSize:'40px', fontWeight:'600'}}>Team of Experts</h2>
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <ProfileCard />
+            </div>
+          </div>
+          {/* <Row className="g-4">
             {teamMembers.map((member, idx) => (
               <Col md={4} key={idx}>
                 <Card className="text-center h-100 border-0">
@@ -185,13 +173,12 @@ const AboutUs = () => {
                       {member.description}
                     </Card.Text>
                     <div className="d-flex justify-content-center gap-3 text-primary fs-5">
-                      {/* Icons could go here */}
                     </div>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
-          </Row>
+          </Row> */}
         </Container>
       </section>
     </>

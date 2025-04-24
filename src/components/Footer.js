@@ -20,26 +20,26 @@ const Footer = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
             });
-    const handleSubscribe = async (e) => {
-        e.preventDefault();
-        try {
-            const res = await fetch("https://admin.gulfgreatsands.com/api/saveTheSubscribe", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email }),
-            });
+            const handleSubscribe = async (e) => {
+                e.preventDefault();
+                try {
+                    const res = await fetch("https://admin.gulfgreatsands.com/api/saveTheSubscribe", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email }),
+                    });
 
-            const data = await res.json();
-            if (res.ok) {
-                setMessage("Subscribed successfully!");
-                setEmail("");
-            } else {
-                setMessage(data.message || "Subscription failed.");
-            }
-        } catch (error) {
-            setMessage("Something went wrong. Please try again.");
-        }
-    };
+                    const data = await res.json();
+                    if (res.ok) {
+                        setMessage("Subscribed successfully!");
+                        setEmail("");
+                    } else {
+                        setMessage(data.message || "Subscription failed.");
+                    }
+                } catch (error) {
+                    setMessage("Something went wrong. Please try again.");
+                }
+            };
             const data = await res.json();
             if (res.ok) {
                 setMessage("Subscribed successfully!");
@@ -71,7 +71,7 @@ const Footer = () => {
                                         <h3>Contact info</h3>
                                         <p>Dubai Industrial City, Dubai, UAE</p>
                                         <a href="mailto:info@aitf-me.com">info@aitf-me.com</a>
-                                        <p><a href="tel:+971506350201">+971 50 635 0201</a> / <a href="tel:+971504813254">+971 50 481 3254</a></p>
+                                        <p style={{fontSize:'15px'}}><a href="tel:+971506350201">+971 50 635 0201</a> / <a href="tel:+971504813254">+971 50 481 3254</a></p>
                                     </Col>
                                     <Col md={3} sm={12}>
                                         <h3>Explore</h3>
@@ -83,15 +83,6 @@ const Footer = () => {
                                             <Link href="/career" className="nav-link px-0">Career</Link>
                                             <Link href="/contact" className="nav-link px-0">Contact Us</Link>
                                         </nav>
-                                        <nav className="nav flex-column fs-6">
-                                            <Link href="/" className="nav-link p-1">Home</Link>
-                                            <Link href="/about" className="nav-link p-1">About Us</Link>
-                                            <Link href="/services" className="nav-link p-1">Services</Link>
-                                            <Link href="/blog" className="nav-link p-1">Blog and News</Link>
-                                            <Link href="/career" className="nav-link p-1">Career</Link>
-                                            <Link href="/contact" className="nav-link p-1">Contact Us</Link>
-                                        </nav>
-
                                     </Col>
 
                                 </Row>
@@ -99,44 +90,71 @@ const Footer = () => {
                         </Row>
                     </Col>
                     <Col md={4}>
-                    <div className="mt-5">
-                        <h3>News Letter</h3>
-                        <Form className="d-flex" onSubmit={handleSubscribe}>
-                            <Form.Control
-                                type="subscribe"
-                                placeholder="Enter your email"
-                                className="me-2"
-                                aria-label="Subscribe"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                            <Button type="submit" variant="outline-success">Subscribe</Button>
-                        <Form onSubmit={handleSubscribe} className="email-form">
-                            <div className="email-input-wrapper">
-                                <input
-                                    type="email"
-                                    className="email-input"
+                        <div className="mt-5">
+                            <h3>News Letter</h3>
+                            <Form onSubmit={handleSubscribe} className="email-form">
+                                <div className="email-input-wrapper d-flex">
+                                    <Form.Control
+                                        type="email"
+                                        className="email-input me-2"
+                                        placeholder="Enter your email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required
+                                    />
+                                    <Button type="submit" className="email-button d-flex align-items-center gap-2">
+                                        <LuBell size={20} /> Subscribe
+                                    </Button>
+                                </div>
+                                {message && <p className="mt-2">{message}</p>}
+                                <p className="fs-6 mt-3">Subscribe to newsletter and promotions</p>
+                                <div className="d-flex align-items-center gap-3 fs-6">
+                                    <span className="fw-semibold">Follow Us On</span>
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+                                </div>
+                            </Form>
+
+                            {/* <Form className="d-flex" onSubmit={handleSubscribe}>
+                                <Form.Control
+                                    type="subscribe"
                                     placeholder="Enter your email"
+                                    className="me-2"
+                                    aria-label="Subscribe"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
-                                <button type="submit" className="email-button">
-                                    <LuBell size={24} /> Subscribe
-                                </button>
-                            </div>
-                        </Form>
-                        {message && <p className="mt-2">{message}</p>}
-                        <p className="fs-6 mt-3">Subscribe to newsletter and promotions</p>
-                        <div className="d-flex align-items-center gap-3 fs-6">
-  <span className="fw-semibold">Follow Us On</span>
-  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
-  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
-</div>
+                                <Button type="submit" variant="outline-success">Subscribe</Button>
+                                <Form onSubmit={handleSubscribe} className="email-form">
+                                    <div className="email-input-wrapper">
+                                        <input
+                                            type="email"
+                                            className="email-input"
+                                            placeholder="Enter your email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                        />
+                                        <button type="submit" className="email-button">
+                                            <LuBell size={24} /> Subscribe
+                                        </button>
+                                    </div>
+                                </Form>
+                                {message && <p className="mt-2">{message}</p>}
+                                <p className="fs-6 mt-3">Subscribe to newsletter and promotions</p>
+                                <div className="d-flex align-items-center gap-3 fs-6">
+                                    <span className="fw-semibold">Follow Us On</span>
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+                                </div>
+                            </Form> */}
                         </div>
                     </Col>
                 </Row>
