@@ -62,6 +62,15 @@ export default function ProfileCard() {
         <Col xs={12} md={6} lg={4}>
           <SingleCard />
         </Col>
+        <Col xs={12} md={6} lg={4}>
+          <SingleCard />
+        </Col>
+        <Col xs={12} md={6} lg={4}>
+          <SingleCard />
+        </Col>
+        <Col xs={12} md={6} lg={4}>
+          <SingleCard />
+        </Col>
       </Row>
     </Container>
   );

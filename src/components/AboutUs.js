@@ -153,32 +153,6 @@ const AboutUs = () => {
               <ProfileCard />
             </div>
           </div>
-          {/* <Row className="g-4">
-            {teamMembers.map((member, idx) => (
-              <Col md={4} key={idx}>
-                <Card className="text-center h-100 border-0">
-                  <div className="mx-auto mt-3" style={{ width: 120, height: 120 }}>
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={120}
-                      height={120}
-                      className="rounded-circle"
-                    />
-                  </div>
-                  <Card.Body>
-                    <Card.Title className="h6">{member.name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{member.title}</Card.Subtitle>
-                    <Card.Text className="text-muted" style={{ fontSize: '0.875rem' }}>
-                      {member.description}
-                    </Card.Text>
-                    <div className="d-flex justify-content-center gap-3 text-primary fs-5">
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row> */}
         </Container>
       </section>
     </>
